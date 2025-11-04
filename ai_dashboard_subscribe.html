@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 প্রিমিয়াম সাবস্ক্রিপশন - HSC অর্থনীতি</title>
+    <style>
+        /* বেসিক সেটআপ */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; 
+            color: #2c3e50;
+        }
+        
+        /* --- মেনুবার স্টাইল (পূর্বের মতোই রাখা হলো) --- */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #34495e; 
+            padding-top: 20px;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #5a708a;
+            padding-bottom: 10px;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            color: #ecf0f1;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #007bff; 
+            color: white;
+        }
+        .sidebar a.active {
+            background-color: #e74c3c; /* সাবস্ক্রাইব পেজের জন্য ভিন্ন অ্যাকটিভ রং */
+            color: white;
+        }
+        
+        /* --- কন্টেন্ট এরিয়া --- */
+        .content {
+            margin-left: 270px; 
+            padding: 30px;
+            text-align: center;
+        }
+        .content h1 {
+            color: #e74c3c;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* --- ফিচার সেকশন --- */
+        .features {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .features h3 {
+            color: #3498db;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .features li {
+            background: #ecf0f1;
+            padding: 10px 15px;
+            border-radius: 6px;
+            flex: 1 1 calc(50% - 15px); /* দুই কলাম */
+            font-size: 1em;
+        }
+        .features li::before {
+            content: '✨';
+            margin-right: 8px;
+        }
+        
+        /* --- প্ল্যান কার্ড --- */
+        .plan-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .plan-card {
+            background-color: #ffffff;
+            border: 2px solid #007bff;
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 123, 255, 0.4);
+        }
+        .plan-card h3 {
+            color: #007bff;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 3em;
+            font-weight: 800;
+            color: #2ecc71;
+            margin: 10px 0;
+        }
+        .price small {
+            font-size: 0.5em;
+            color: #95a5a6;
+        }
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .plan-card li {
+            padding: 5px 0;
+        }
+        
+        /* --- বাটন স্টাইল --- */
+        .subscribe-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #e74c3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .subscribe-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>AI ড্যাশবোর্ড 🧠</h2>
+        <a href="#">🏠 হোম</a>
+        <a href="#">📚 পাঠ্যসূচি</a>
+        <a href="#">📊 বিশ্লেষণ (Analytics)</a>
+        <a href="#">📝 নতুন কুইজ</a>
+        <a href="#" class="active">👑 সাবস্ক্রাইব করুন</a>
+        <a href="#">💡 প্রস্তুতি নির্দেশিকা</a>
+    </div>
+
+    <div class="content">
+        <h1>👑 প্রিমিয়াম অ্যাক্সেস: আপনার HSC প্রস্তুতিকে করুন এক ধাপ এগিয়ে!</h1>
+        <p>প্রিমিয়াম সাবস্ক্রিপশনের মাধ্যমে আপনার AI লার্নিং ড্যাশবোর্ডের পূর্ণ ক্ষমতা উন্মোচন করুন।</p>
+        
+        <div class="features">
+            <h3>প্রিমিয়াম ফিচারের সুবিধা</h3>
+            <ul>
+                <li>ব্যক্তিগতকৃত AI দুর্বলতা বিশ্লেষণ</li>
+                <li>আনলিমিটেড কুইজ এবং মক টেস্ট</li>
+                <li>বিশেষ গ্রাফিক্যাল পারফরম্যান্স রিপোর্ট</li>
+                <li>সম্পূর্ণ অফলাইন অ্যাক্সেস (শীঘ্রই আসছে)</li>
+                <li>প্রতিটি প্রশ্নের বিস্তারিত ব্যাখ্যা ও সমাধান</li>
+                <li>বিশেষজ্ঞদের তৈরি উচ্চ মানের MCQ সেট</li>
+            </ul>
+        </div>
+
+        <h2 style="color: #3498db; margin-top: 40px;">আপনার জন্য সেরা প্ল্যান বেছে নিন</h2>
+
+        <div class="plan-container">
+            
+            <div class="plan-card">
+                <h3>মাসিক প্ল্যান</h3>
+                <p>দ্রুত পরীক্ষার প্রস্তুতির জন্য</p>
+                <div class="price">
+                    ৳১৫০<small>/মাস</small>
+                </div>
+                <ul>
+                    <li>✅ সকল প্রিমিয়াম ফিচার</li>
+                    <li>✅ ১ মাস মেয়াদ</li>
+                    <li>❌ দীর্ঘমেয়াদী সাশ্রয় নেই</li>
+                </ul>
+                <a href="#" class="subscribe-btn">মাসিক সাবস্ক্রাইব করুন</a>
+            </div>
+
+            <div class="plan-card" style="border-color: #f39c12; box-shadow: 0 8px 16px rgba(243, 156, 18, 0.4);">
+                <h3 style="color: #f39c12;">🔥 জনপ্রিয় প্ল্যান (৬ মাস)</h3>
+                <p>সম্পূর্ণ HSC প্রস্তুতির জন্য</p>
+                <div class="price" style="color: #f39c12;">
+                    ৳৬০০<small>/৬ মাস</small>
+                </div>
+                <ul>
+                    <li>✅ সকল প্রিমিয়াম ফিচার</li>
+                    <li>✅ ৬ মাস মেয়াদ</li>
+                    <li>✅ ৫০% সাশ্রয় (মাসিক প্ল্যানের তুলনায়)</li>
+                </ul>
+                <a href="#" class="subscribe-btn" style="background-color: #f39c12;">৬ মাসের জন্য সাবস্ক্রাইব করুন</a>
+            </div>
+            
+        </div>
+        
+    </div>
+
+</body>
+</html>
