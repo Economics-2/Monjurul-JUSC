@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏭 বাংলাদেশের শিল্প: প্রবৃদ্ধির ইঞ্জিন | HSC অর্থনীতি</title>
+    <style>
+        /* ফন্ট ও বেসিক স্টাইল */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            /* গ্লাস ইফেক্টের জন্য একটি ব্যাকগ্রাউন্ড ইমেজ আবশ্যক */
+            background-image: url('https://source.unsplash.com/random/1920x1080/?factory,dhaka');
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 30px;
+            /* গ্লাসমরফিজম ইফেক্ট */
+            background: rgba(255, 255, 255, 0.15); /* স্বচ্ছ সাদা ব্যাকগ্রাউন্ড */
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(8px); /* মূল গ্লাস ইফেক্ট */
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        /* নেভিগেশন বার (Nav Bar) স্টাইল */
+        .navbar {
+            background: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            border-radius: 15px;
+            margin: -30px -30px 30px -30px;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.4s, color 0.4s;
+            border-radius: 8px;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            color: #1abc9c;
+        }
+
+        /* হেডিং স্টাইল */
+        h1 {
+            color: #000;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.8em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(90deg, #1abc9c, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            padding-bottom: 5px;
+            font-size: 1.9em;
+            font-weight: 600;
+        }
+
+        /* হুক সেকশন */
+        .hook {
+            background: rgba(255, 255, 255, 0.2); /* গ্লাস ইফেক্ট বজায় রাখতে কম স্বচ্ছতা */
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            border-left: 6px solid #e67e22;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .hook p {
+            margin: 0;
+        }
+        
+        /* তালিকা ও মূল শব্দ */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            background: rgba(255, 255, 255, 0.3); /* লিস্ট আইটেমে হালকা গ্লাস ইফেক্ট */
+            margin-bottom: 12px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        ul li::before {
+            content: '⚙️';
+            margin-right: 10px;
+            color: #f39c12;
+        }
+        strong {
+            color: #c0392b;
+            font-weight: 700;
+        }
+        
+        /* সোশ্যাল শেয়ার বাটন */
+        .share-buttons {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+        .share-buttons p {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #000;
+            font-size: 1.1em;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+        }
+        .share-btn {
+            display: inline-block;
+            padding: 12px 18px;
+            margin: 0 6px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s;
+        }
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .fb { background-color: #3b5998; }
+        .twitter { background-color: #1da1f2; }
+        .whatsapp { background-color: #25d366; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <a href="#home">হোম</a>
+            <a href="#definition">শিল্পের ধারণা</a>
+            <a href="#major-industries">প্রধান শিল্প</a>
+            <a href="#problems">সমস্যা</a>
+        </div>
+
+        <h1 id="home">বাংলাদেশের শিল্প: প্রবৃদ্ধির ইঞ্জিন ও অর্থনীতির ভবিষ্যৎ</h1>
+
+        <div class="hook">
+            <p><strong>🔥 আপনি কি জানেন?</strong> একসময় শুধু পাট আর কৃষির ওপর নির্ভরশীল বাংলাদেশ আজ বিশ্বের দ্বিতীয় বৃহত্তম তৈরি পোশাক রপ্তানিকারক! ঢাকা থেকে চট্টগ্রাম, বগুড়া থেকে খুলনা—শত শত কারখানা রাতদিন চলছে, যা দেশের অর্থনীতির চাকা ঘোরাচ্ছে। এই দ্রুত পরিবর্তনের মূল চালিকাশক্তি হলো **বাংলাদেশের শিল্প খাত**। এইচএসসি অর্থনীতির এই সবচেয়ে গতিশীল এবং গুরুত্বপূর্ণ অংশটি কেন আপনার মনোযোগ দাবি করে? চলুন, জেনে নিই।</p>
+        </div>
+        
+        <h2 id="definition">🔍 বাংলাদেশের শিল্প খাত: ধারণা ও গুরুত্ব</h2>
+        <p>অর্থনীতিতে শিল্প খাত হলো সেই প্রক্রিয়া, যেখানে প্রাকৃতিক সম্পদ (কাঁচামাল) সংগ্রহ করে মানুষের ব্যবহারের উপযোগী পণ্যে রূপান্তর করা হয়। এটি দেশের **অর্থনৈতিক প্রবৃদ্ধি (GDP Growth)** এবং **কর্মসংস্থান সৃষ্টির** প্রধান উৎস।</p>
+        
+        <p>বাংলাদেশের শিল্প খাতকে সাধারণত তিন ভাগে ভাগ করা হয়:</p>
+        <ul>
+            <li>**বৃহৎ শিল্প (Large Scale Industry):** যে শিল্পে প্রচুর মূলধন, উন্নত যন্ত্রপাতি এবং বিপুল সংখ্যক শ্রমিক লাগে (যেমন, তৈরি পোশাক, সার কারখানা)।</li>
+            <li>**মাঝারি শিল্প (Medium Scale Industry):** বৃহৎ শিল্পের চেয়ে ছোট, তবে ক্ষুদ্র শিল্পের চেয়ে বড় আকারের শিল্প (যেমন, মাঝারি আকারের ফার্মাসিউটিক্যালস)।</li>
+            <li>**ক্ষুদ্র ও কুটির শিল্প (Small and Cottage Industry):** কম মূলধন ও স্থানীয় প্রযুক্তিনির্ভর শিল্প (যেমন, তাঁত শিল্প, হস্তশিল্প)। এটি কর্মসংস্থান ও গ্রামীণ অর্থনীতিতে গুরুত্বপূর্ণ।</li>
+        </ul>
+
+        <h2 id="major-industries">🏭 প্রধান শিল্পসমূহ: অর্থনীতির প্রাণ</h2>
+        <p>বাংলাদেশের অর্থনীতির মূল চালিকাশক্তি হিসেবে কাজ করে যে শিল্পগুলো:</p>
+        
+        <ul>
+            <li>**তৈরি পোশাক শিল্প (RMG - Ready Made Garments):** এটি বাংলাদেশের **এক নম্বর রপ্তানি খাত**। বিপুল সংখ্যক নারী শ্রমিকের কর্মসংস্থান এবং বৈদেশিক মুদ্রা অর্জনে এর ভূমিকা সবচেয়ে বেশি।</li>
+            <li>**পাট ও পাটজাত শিল্প (Jute Industry):** একসময় "সোনালী আঁশ" নামে পরিচিত ছিল। পরিবেশবান্ধব হওয়ায় বর্তমানে পাট ও পাটজাত পণ্যের চাহিদা বিশ্বব্যাপী বাড়ছে।</li>
+            <li>**চামড়া ও চামড়াজাত শিল্প (Leather Industry):** রপ্তানিতে পোশাকের পরই এই খাতের অবস্থান। বিশ্বজুড়ে এর ব্যাপক সম্ভাবনা রয়েছে।</li>
+            <li>**ওষুধ শিল্প (Pharmaceuticals Industry):** দেশের প্রায় ৯৭% চাহিদা মিটিয়েও বাংলাদেশ এখন উন্নত বিশ্বে ওষুধ রপ্তানি করে। এটি দ্রুত বর্ধনশীল একটি খাত।</li>
+            <li>**সিরামিকস ও অন্যান্য শিল্প:** সিমেন্ট, সিরামিকস, স্টিল, জাহাজ নির্মাণ এবং হালকা প্রকৌশল শিল্প (Light Engineering) বর্তমানে দেশের অবকাঠামো উন্নয়নে বড় ভূমিকা রাখছে।</li>
+        </ul>
+
+        <h2>🚧 শিল্প খাতের চ্যালেঞ্জ ও সমস্যাসমূহ</h2>
+        <p>দ্রুত উন্নতি সত্ত্বেও বাংলাদেশের শিল্প খাতকে কিছু গুরুতর সমস্যার মোকাবিলা করতে হয়:</p>
+        
+        <ul>
+            <li>**অবকাঠামোগত ঘাটতি:** গ্যাস, বিদ্যুৎ এবং পরিবহন সংযোগের অপর্যাপ্ততা শিল্পের উৎপাদন ব্যয় বাড়িয়ে দেয়।</li>
+            <li>**ঋণ ও মূলধনের অভাব:** ক্ষুদ্র ও মাঝারি শিল্পের জন্য সহজ শর্তে ব্যাংক ঋণ পাওয়া কঠিন।</li>
+            <li>**দক্ষ শ্রমিকের অভাব:** প্রযুক্তিগতভাবে উন্নত কারিগরি ও ব্যবস্থাপনা পর্যায়ে দক্ষ কর্মীর ঘাটতি রয়েছে।</li>
+            <li>**রাজনৈতিক অস্থিরতা ও নীতিগত জটিলতা:** ঘন ঘন নীতি পরিবর্তন এবং আমলাতান্ত্রিক জটিলতা বিনিয়োগকে নিরুৎসাহিত করে।</li>
+            <li>**বাজার প্রতিযোগিতা:** আন্তর্জাতিক বাজারে অন্য দেশের সাথে তীব্র প্রতিযোগিতা শিল্পগুলোর জন্য বড় চ্যালেঞ্জ।</li>
+        </ul>
+
+        <h2>🎯 উপসংহার: এগিয়ে যাওয়ার পথ</h2>
+        <p>বাংলাদেশের শিল্প খাত এখন কেবল টিকে থাকার সংগ্রাম করছে না, বরং **বৈশ্বিক অর্থনীতিতে নিজেদের অবস্থান শক্তিশালী করছে**। সরকারের সঠিক নীতি, নিরবচ্ছিন্ন বিদ্যুৎ ও গ্যাস সরবরাহ এবং শিল্পে আধুনিক প্রযুক্তির ব্যবহার নিশ্চিত করতে পারলে এই খাত অদূর ভবিষ্যতে বাংলাদেশকে উন্নত দেশের কাতারে নিয়ে যেতে পারবে। এইচএসসির জন্য শিল্পের ভূমিকা ও সমস্যাগুলো ভালোভাবে বুঝলে অর্থনৈতিক প্রবৃদ্ধির ধারণাটি পরিষ্কার হবে।</p>
+
+        <hr style="border-top: 1px solid rgba(255, 255, 255, 0.5);">
+        <p style="text-align: center; font-size: 1em; color: #000; text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);">বাংলাদেশের শিল্প খাতের সমস্যা সমাধানে আপনার কোনো নতুন আইডিয়া থাকলে মন্তব্য করুন!</p>
+
+        <div class="share-buttons">
+            <p>গুরুত্বপূর্ণ তথ্যটি আপনার বন্ধুদের সাথে শেয়ার করুন:</p>
+            <a href="#" class="share-btn fb">Facebook</a>
+            <a href="#" class="share-btn twitter">Twitter / X</a>
+            <a href="#" class="share-btn whatsapp">WhatsApp</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
