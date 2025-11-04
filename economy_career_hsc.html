@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 অর্থনীতিতে ক্যারিয়ার: চাকরির বাজারের 'সুপার পাওয়ার' | HSC গাইড</title>
+    <style>
+        /* ফন্ট ও বেসিক স্টাইল */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            color: #34495e;
+            margin: 0;
+            padding: 0;
+            /* ফুল-পেজ ফ্লুইড ব্যাকগ্রাউন্ড */
+            background: linear-gradient(135deg, #f7f9fb 0%, #eef4f9 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 100%; /* ফ্লুইড ডিজাইনের জন্য */
+            padding: 0;
+        }
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease-in-out;
+            margin-bottom: 30px;
+        }
+
+        /* নেভিগেশন বার (Dropdown Menu) স্টাইল */
+        .navbar {
+            background-color: #007bff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: sticky; /* স্ক্রল করার সময় মেনু থাকবে */
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar li {
+            position: relative;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+        /* ড্রপডাউন কন্টেন্ট */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0 0 8px 8px;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+            color: #007bff;
+        }
+        .navbar li:hover .dropdown-content {
+            display: block;
+        }
+
+        /* হেডিং স্টাইল */
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 3em;
+            padding-top: 20px;
+        }
+        h2 {
+            color: #28a745;
+            margin-top: 35px;
+            border-left: 6px solid #28a745;
+            padding-left: 15px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        /* হুক সেকশন (ফ্লুইড কার্ড) */
+        .hook {
+            background: linear-gradient(90deg, #1abc9c, #2ecc71);
+            padding: 40px 20px;
+            color: white;
+            font-size: 1.4em;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(26, 188, 156, 0.4);
+            margin-bottom: 0;
+        }
+        .hook p {
+            margin: 0;
+        }
+        
+        /* প্রশ্ন-উত্তর স্টাইল */
+        .qa-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        .qa-item h3 {
+            color: #dc3545; /* প্রশ্ন */
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            border-bottom: 2px dashed #dc354530;
+            padding-bottom: 5px;
+        }
+        .qa-item p {
+            color: #34495e; /* উত্তর */
+            padding-left: 10px;
+            margin-top: 5px;
+        }
+        .qa-item strong {
+            color: #007bff; /* মূল শব্দ */
+        }
+        
+        /* সোশ্যাল শেয়ার বাটন */
+        .share-buttons {
+            margin-top: 40px;
+            padding: 25px;
+            border-top: 2px dashed #adb5bd;
+            text-align: center;
+        }
+        .share-buttons p {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .share-btn {
+            display: inline-block;
+            padding: 12px 18px;
+            margin: 0 6px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .share-btn:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .fb { background-color: #3b5998; }
+        .twitter { background-color: #1da1f2; }
+        .whatsapp { background-color: #25d366; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#seminar">প্রশ্নোত্তর পর্ব</a></li>
+                <li class="dropdown">
+                    <a href="#">ক্যারিয়ার সুযোগ ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#sector-bank">ব্যাংকিং ও অর্থ</a>
+                        <a href="#sector-gov">সরকারি ও গবেষণা</a>
+                        <a href="#sector-private">বেসরকারি ও এনজিও</a>
+                    </div>
+                </li>
+                <li><a href="#tip">সফলতার টিপস</a></li>
+            </ul>
+        </div>
+
+        <div class="hook">
+            <h1>🎓 অর্থনীতিতে ক্যারিয়ার: চাকরির বাজারের 'সুপার পাওয়ার'</h1>
+            <p><strong>🚨 আপনি কি জানেন?</strong> অর্থনীতি কেবল চাহিদা, সরবরাহ আর জিডিপির হিসাব নয়; এটি হলো **ভবিষ্যৎ বোঝার বিজ্ঞান!** যিনি অর্থনীতি জানেন, তিনি কেবল দেশ নয়, একটি কোম্পানির ভবিষ্যৎও বিশ্লেষণ করতে পারেন। সম্প্রতি শিক্ষার্থীদের সাথে একটি প্রশ্নোত্তর পর্বে **অর্থনীতিতে পড়াশোনার পর কী কী অসাধারণ ক্যারিয়ার সুযোগ অপেক্ষা করছে**, তা নিয়েই বিস্তারিত আলোচনা হয়েছে। চলুন, সেই আলোচনার মূল অংশগুলো দেখে নিই!</p>
+        </div>
+
+        <div class="content-section">
+            <h2 id="seminar">🎤 প্রশ্নোত্তর পর্ব: অর্থনীতিবিদ হওয়ার পথে</h2>
+            <p>সেমিনারে অর্থনীতিতে উচ্চশিক্ষা ও চাকরির বাজার সম্পর্কে শিক্ষার্থীদের সবচেয়ে গুরুত্বপূর্ণ প্রশ্নগুলোর উত্তর দেওয়া হয়েছে। নিচে সেই ফলপ্রসূ প্রশ্নোত্তর পর্বের কিছু অংশ তুলে ধরা হলো:</p>
+
+            <div class="qa-item">
+                <h3>প্রশ্ন ১: অর্থনীতিতে পড়লে চাকরির বাজার কেমন?</h3>
+                <p>উত্তর: অর্থনীতি হলো একটি **ভার্সাটাইল (বহুমুখী)** বিষয়। ব্যাংক, সরকারি প্রশাসন, বহুজাতিক কোম্পানি (MNC), গবেষণা সংস্থা, এমনকি ডেটা সায়েন্স—সবখানেই অর্থনীতি গ্র্যাজুয়েটদের চাহিদা প্রচুর। অর্থনৈতিক বিশ্লেষণ ও সংখ্যাতাত্ত্বিক দক্ষতা চাকরির বাজারে আপনাকে **'সুপার পাওয়ার'** এনে দেবে।</p>
+            </div>
+
+            <div class="qa-item">
+                <h3>প্রশ্ন ২: অর্থনীতির পর সবচেয়ে বেশি বেতনের চাকরি কোনটি?</h3>
+                <p>উত্তর: সাধারণত **বিনিয়োগ ব্যাংক (Investment Banking), ডেটা অ্যানালিটিকস** এবং **কেন্দ্রীয় ব্যাংকের (যেমন: বাংলাদেশ ব্যাংক)** উচ্চপদস্থ অর্থনীতিবিদদের বেতন সবচেয়ে আকর্ষণীয় হয়। তবে, কর্পোরেট সেক্টরেও **বিজনেস অ্যানালিস্ট** হিসেবে বড় সুযোগ রয়েছে।</p>
+            </div>
+
+            <h2 id="sector-bank">🏦 ব্যাংকিং ও ফিন্যান্স সেক্টরে সুযোগ</h2>
+            <p>অর্থনীতি গ্র্যাজুয়েটদের জন্য ব্যাংকিং খাত হলো সবচেয়ে বড় নিয়োগদাতা।</p>
+            <ul>
+                <li>**কেন্দ্রীয় ব্যাংক:** গবেষণা কর্মকর্তা, সহকারী পরিচালক (অর্থনীতি/পরিসংখ্যান)।</li>
+                <li>**বাণিজ্যিক ব্যাংক:** প্রবেশনারি অফিসার (PO), ফিন্যান্সিয়াল অ্যানালিস্ট, ক্রেডিট অ্যানালিস্ট।</li>
+                <li>**ইনভেস্টমেন্ট ফার্ম:** পোর্টফোলিও ম্যানেজার, ইকোনমিক ফোরকাস্টার।</li>
+            </ul>
+            
+            <h2 id="sector-gov">🏛️ সরকারি ও গবেষণা প্রতিষ্ঠানে সুযোগ</h2>
+            <p>দেশের নীতি নির্ধারণী পর্যায়ে কাজ করার জন্য অর্থনীতি একটি অপরিহার্য বিষয়।</p>
+            <ul>
+                <li>**বিসিএস ও প্রশাসন:** বিসিএস প্রশাসন, পররাষ্ট্র বা ইকোনমিক ক্যাডারে যোগদানের বিশেষ সুযোগ থাকে।</li>
+                <li>**গবেষণা সংস্থা:** **বিআইডিএস (BIDS)**, সিপিডি (CPD), বিভিন্ন বিশ্ববিদ্যালয়ের গবেষণা কেন্দ্রে অর্থনীতিবিদ ও গবেষক হিসেবে।</li>
+                <li>**জাতিসংঘ ও আন্তর্জাতিক সংস্থা:** বিশ্বব্যাংক, আইএমএফ, ইউএনডিপি-র মতো প্রতিষ্ঠানে অর্থনৈতিক বিশ্লেষক হিসেবে কাজ করার সুযোগ।</li>
+            </ul>
+
+            <h2 id="sector-private">🏢 বেসরকারি ও বহুজাতিক কোম্পানিতে সুযোগ</h2>
+            <p>ডেটাভিত্তিক সিদ্ধান্ত গ্রহণের জন্য কর্পোরেট জগতে অর্থনীতিবিদদের কদর বাড়ছে।</p>
+            <ul>
+                <li>**মার্কেট রিসার্চ:** **মার্কেট ইকোনমিস্ট** বা **রিসার্চ অ্যানালিস্ট** হিসেবে ভোক্তাদের আচরণ ও বাজার বিশ্লেষণ।</li>
+                <li>**এনজিও/উন্নয়ন সংস্থা:** প্রকল্প মূল্যায়ন, অর্থনৈতিক প্রভাব বিশ্লেষণ (Impact Assessment) নিয়ে কাজ।</li>
+                <li>**ডেটা সায়েন্স ও অ্যানালিটিকস:** অর্থনীতিতে ব্যবহৃত ইকোনোমেট্রিক্স জ্ঞান ডেটা সায়েন্সে দারুণ কাজে লাগে।</li>
+            </ul>
+            
+            <h2 id="tip">🚀 সফলতার টিপস: নিজেকে প্রস্তুত করার উপায়</h2>
+            <p>সেমিনারের শেষে শিক্ষার্থীদেরকে অর্থনীতিতে সফল হওয়ার জন্য কিছু বিশেষ টিপস দেওয়া হয়:</p>
+            <ul>
+                <li>**সংখ্যা ও ডেটার দক্ষতা:** শুধু তত্ত্ব নয়, **পরিসংখ্যান ও ইকোনোমেট্রিক্সে** দক্ষ হতে হবে। Python বা R-এর মতো প্রোগ্রামিং ল্যাঙ্গুয়েজ জানা অপরিহার্য।</li>
+                <li>**বিশ্লেষণ ক্ষমতা:** জটিল অর্থনৈতিক সমস্যাকে সহজভাবে বিশ্লেষণ ও ব্যাখ্যা করার ক্ষমতা অর্জন করা।</li>
+                <li>**ইংরেজি ও যোগাযোগ:** আন্তর্জাতিক সংস্থা এবং বহুজাতিক কোম্পানিতে ভালো করতে হলে ইংরেজিতে দক্ষতা অত্যন্ত গুরুত্বপূর্ণ।</li>
+                <li>**ইন্টার্নশিপ:** পড়াশোনার সময় বিভিন্ন ব্যাংক বা গবেষণা প্রতিষ্ঠানে **ইন্টার্নশিপ** করলে চাকরির অভিজ্ঞতা তৈরি হয়।</li>
+            </ul>
+
+        </div>
+        
+        <div class="content-section" style="text-align: center; background-color: #f0f8ff;">
+            <hr style="border-top: 1px dashed #adb5bd;">
+            <p style="font-size: 1.1em; color: #333;">অর্থনীতিতে পড়াশোনার জন্য ঢাকা বিশ্ববিদ্যালয় বা অন্যান্য সেরা বিশ্ববিদ্যালয়ের ভর্তি প্রস্তুতি নিয়ে জানতে চান? মন্তব্য করুন!</p>
+        </div>
+
+        <div class="content-section share-buttons">
+            <p>গুরুত্বপূর্ণ তথ্যটি আপনার বন্ধুদের সাথে শেয়ার করুন:</p>
+            <a href="#" class="share-btn fb">Facebook</a>
+            <a href="#" class="share-btn twitter">Twitter / X</a>
+            <a href="#" class="share-btn whatsapp">WhatsApp</a>
+        </div>
+    </div>
+
+</body>
+</html>
