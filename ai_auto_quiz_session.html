@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 AI অটো-কুইজ সেশন: মুদ্রাস্ফীতি ও কর্মসংস্থান</title>
+    <style>
+        /* বেসিক স্টাইল */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #34495e;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* --- কুইজ হেডার ও ড্যাশবোর্ড থিম --- */
+        .quiz-header {
+            background-color: #007bff;
+            color: white;
+            padding: 25px;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+        }
+        .quiz-header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .quiz-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* --- কুইজ ফর্ম ও প্রশ্ন কার্ড --- */
+        .quiz-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        .question-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #2ecc71; /* এআই সোর্স ইন্ডিকেটর */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .question-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.15em;
+            margin-bottom: 15px;
+        }
+
+        /* --- অপশন স্টাইল --- */
+        .options label {
+            display: block;
+            background-color: #ffffff;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+        .options label:hover {
+            background-color: #eaf4ff;
+            border-color: #007bff;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.1);
+        }
+
+        /* --- সাবমিট বাটন --- */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        
+        /* --- ইমেজ/গ্রাফ প্লেসহোল্ডার স্টাইল --- */
+        .image-placeholder {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border: 1px dashed #95a5a6;
+            text-align: center;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="quiz-header">
+            <h1>📝 HSC অর্থনীতি AI অটো-কুইজ সেশন</h1>
+            <div class="quiz-details">
+                <span>বিষয়: **মুদ্রাস্ফীতি ও মানবসম্পদ** (AI ফোকাসড)</span>
+                <span>সময়: ২০ মিনিট</span>
+            </div>
+        </div>
+
+        <form class="quiz-form" onsubmit="alert('আপনার কুইজ জমা দেওয়া হয়েছে! এআই আপনার ফলাফল বিশ্লেষণ করছে...'); return false;">
+            
+            <div class="question-card">
+                <h3>১. বহুপদী সমাপ্তিসূচক: চাহিদাজনিত মুদ্রাস্ফীতির কারণসমূহ হলো—</h3>
+                
+                <div class="options">
+                    <label>
+                        <input type="radio" name="q1" value="a"> ক) i ও ii
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="b"> খ) i ও iii
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="c"> গ) ii ও iii
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="d"> ঘ) i, ii ও iii
+                    </label>
+                </div>
+                <div class="image-placeholder">
+                    i) ব্যাংক ঋণের সুদের হার হ্রাস <br> ii) সরকারি ব্যয় বৃদ্ধি <br> iii) আন্তর্জাতিক বাজারে তেলের দাম বৃদ্ধি
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3>২. অভিন্ন তথ্যভিত্তিক প্রশ্ন: প্রদত্ত গ্রাফটি মনোযোগ সহকারে দেখুন এবং উত্তর দিন।</h3>
+                
+                <div class="image-placeholder" style="height: 150px;">
+                    [এখানে একটি গ্রাফ/চিত্র দেখানো হবে: যেখানে সামগ্রিক চাহিদা (AD) ডানদিকে স্থানান্তরিত হয়েছে।]
+                    <p style="margin-top: 10px;">**গ্রাফ: সামগ্রিক চাহিদা (AD) বৃদ্ধি**</p>
+                </div>
+
+                <h3>প্রশ্ন ২ (ক): গ্রাফের পরিবর্তন অর্থনীতির কোন পরিস্থিতি নির্দেশ করে?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2a" value="a"> ক) মন্দা</label>
+                    <label><input type="radio" name="q2a" value="b"> খ) চাহিদাজনিত মুদ্রাস্ফীতি</label>
+                    <label><input type="radio" name="q2a" value="c"> গ) ব্যয়জনিত মুদ্রাস্ফীতি</label>
+                    <label><input type="radio" name="q2a" value="d"> ঘ) কর্মসংস্থান হ্রাস</label>
+                </div>
+            </div>
+            
+            <div class="question-card">
+                <h3>৩. আপনার পূর্ববর্তী ভুলের ভিত্তিতে এআই কর্তৃক তৈরি প্রশ্ন: জনসংখ্যাকে মানবসম্পদে পরিণত করার মূল চাবিকাঠি কী?</h3>
+                
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> ক) দারিদ্র্য দূরীকরণ</label>
+                    <label><input type="radio" name="q3" value="b"> খ) জনসংখ্যা নিয়ন্ত্রণ</label>
+                    <label><input type="radio" name="q3" value="c"> গ) শিক্ষা, প্রশিক্ষণ ও স্বাস্থ্যসেবা</label>
+                    <label><input type="radio" name="q3" value="d"> ঘ) ক্ষুদ্রঋণ বিতরণ</label>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3>৪. ব্যয় বৃদ্ধিজনিত মুদ্রাস্ফীতির সময় নিচের কোন শ্রেণিটি সবচেয়ে বেশি লাভবান হয়?</h3>
+                
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> ক) বেতনভোগী শ্রমিক</label>
+                    <label><input type="radio" name="q4" value="b"> খ) ঋণদাতা (ব্যাংক)</label>
+                    <label><input type="radio" name="q4" value="c"> গ) ফটকাবাজ ও ব্যবসায়ী</label>
+                    <label><input type="radio" name="q4" value="d"> ঘ) পেনশনভোগী</label>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">কুইজ শেষ করুন ও ফলাফল দেখুন</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
