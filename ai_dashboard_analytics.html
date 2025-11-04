@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 বিশ্লেষণ (Analytics) ড্যাশবোর্ড</title>
+    <style>
+        /* ফন্ট ও বেসিক সেটআপ */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; /* হালকা ব্যাকগ্রাউন্ড */
+            color: #2c3e50;
+        }
+        
+        /* --- মেনুবার স্টাইল --- */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #34495e; /* ডার্ক থিম */
+            padding-top: 20px;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #5a708a;
+            padding-bottom: 10px;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 1em;
+            color: #ecf0f1;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #007bff; /* অ্যাকটিভ মেনুর রং */
+            color: white;
+        }
+        
+        /* --- কন্টেন্ট এরিয়া --- */
+        .content {
+            margin-left: 270px; /* মেনুবারের জন্য জায়গা */
+            padding: 30px;
+        }
+        .content h1 {
+            color: #007bff;
+            border-bottom: 3px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* --- অ্যানালিটিক্স কার্ড --- */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 40px); /* ৩ কলাম লেআউট */
+            min-width: 250px;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #34495e;
+            font-size: 1.2em;
+            border-bottom: 2px dashed #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2ecc71; /* সাফল্যের রং */
+            margin: 5px 0;
+        }
+        .trend {
+            font-size: 0.9em;
+            color: #95a5a6;
+        }
+        
+        /* --- গ্রাফ প্লেসহোল্ডার --- */
+        .graph-card {
+            flex: 1 1 100%;
+            height: 300px;
+            text-align: center;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border: 1px dashed #aeb3b7;
+            color: #7f8c8d;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+        }
+
+        /* --- দুর্বলতা তালিকা --- */
+        .weakness-list {
+            list-style: none;
+            padding: 0;
+        }
+        .weakness-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+            display: flex;
+            justify-content: space-between;
+        }
+        .weakness-list li span {
+            font-weight: 600;
+            color: #e74c3c; /* লাল রং: দুর্বলতা */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>AI ড্যাশবোর্ড 🧠</h2>
+        <a href="#">🏠 হোম</a>
+        <a href="#">📚 পাঠ্যসূচি</a>
+        <a href="#" class="active">📊 বিশ্লেষণ (Analytics)</a>
+        <a href="#">📝 নতুন কুইজ</a>
+        <a href="#">💡 প্রস্তুতি নির্দেশিকা</a>
+    </div>
+
+    <div class="content">
+        <h1>📊 আপনার পরীক্ষার বিশ্লেষণ ও অগ্রগতি</h1>
+        
+        <div class="card-container">
+            
+            <div class="card">
+                <h3>মোট কুইজ সেশন</h3>
+                <div class="metric-value">০৫</div>
+                <p class="trend">গত সপ্তাহে: +১ সেশন</p>
+            </div>
+            
+            <div class="card">
+                <h3>গড় স্কোর (%)</h3>
+                <div class="metric-value" style="color: #f39c12;">৭৮%</div>
+                <p class="trend">লক্ষ্য: ৯০% এর উপরে</p>
+            </div>
+            
+            <div class="card">
+                <h3>বারবার ভুল প্রশ্ন</h3>
+                <div class="metric-value" style="color: #e74c3c;">১২</div>
+                <p class="trend">এআই দ্বারা চিহ্নিত</p>
+            </div>
+            
+            <div class="graph-card" style="height: 350px;">
+                <h3>📜 সময়ের সাথে আপনার পারফরম্যান্সের প্রবণতা</h3>
+                
+            </div>
+
+            <div class="card" style="flex: 1 1 calc(50% - 30px);">
+                <h3>📘 অধ্যায়ভিত্তিক গড় স্কোর</h3>
+                <div class="weakness-list">
+                    <li>মুদ্রাস্ফীতি: <span>৮২%</span></li>
+                    <li>মানবসম্পদ: <span>৬৯%</span></li>
+                    <li>বাজার কাঠামো: <span>৯১%</span></li>
+                    <li>মৌলিক সমস্যা: <span>৮৫%</span></li>
+                    <li>অর্থ ও ব্যাংক: <span>৭৫%</span></li>
+                </div>
+            </div>
+            
+            <div class="card" style="flex: 1 1 calc(50% - 30px);">
+                <h3>🚨 সবচেয়ে দুর্বল টপিক (AI ফোকাস)</h3>
+                <div class="weakness-list">
+                    <li>ব্যয়জনিত মুদ্রাস্ফীতির কারণ <span>(৪/১০)</span></li>
+                    <li>ছদ্ম বেকারত্ব ও প্রান্তিক উৎপাদনশীলতা <span>(৫/১০)</span></li>
+                    <li>মুদ্রা নীতির পরিমাণগত পদ্ধতি <span>(৬/১০)</span></li>
+                    <li>ভোগ্য দ্রব্য ও মূলধনী দ্রব্যের পার্থক্য <span>(৭/১০)</span></li>
+                    <li>HDI ও GNH-এর তুলনা <span>(৭/১০)</span></li>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
