@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📈 মুদ্রাস্ফীতি: অর্থনীতির রক্তক্ষরণ - বিস্তারিত বিশ্লেষণ ও সমাধান | HSC অর্থনীতি</title>
+    <style>
+        /* ফন্ট ও বেসিক স্টাইল */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: #34495e;
+            margin: 0;
+            padding: 0;
+            background: #f4f6f9; /* হালকা ব্যাকগ্রাউন্ড */
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 950px;
+            margin: 30px auto;
+            padding: 0;
+        }
+
+        /* অনুপ্রাণিত ডিজাইন ও হেডার (ফ্ল্যাট/মডার্ন) */
+        .header-graphic {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); /* তীব্র লাল গ্র্যাডিয়েন্ট - ঝুঁকি নির্দেশক */
+            padding: 50px 30px;
+            color: white;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 10px 30px rgba(192, 57, 43, 0.5);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .header-graphic::before {
+            content: '৳ / $'; /* মুদ্রার প্রতীক */
+            position: absolute;
+            top: 5px;
+            right: 20px;
+            font-size: 10em;
+            opacity: 0.1;
+            font-weight: 900;
+            transform: rotate(10deg);
+        }
+        
+        .main-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* নেভিগেশন বার (Dropdown Menu) */
+        .navbar {
+            background-color: #2c3e50; /* গাঢ় থিম */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            padding: 15px 20px;
+            color: white;
+            font-weight: 600;
+        }
+        .navbar a:hover {
+            background-color: #e74c3c;
+        }
+        .dropdown-content {
+            background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar li:hover .dropdown-content {
+            display: block;
+        }
+
+        /* হেডিং স্টাইল */
+        h1 {
+            color: white;
+            font-size: 2.8em;
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 35px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 5px;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        h3 {
+            color: #d35400;
+            font-size: 1.3em;
+            margin-top: 20px;
+        }
+
+        /* হুক সেকশন */
+        .hook p {
+            font-size: 1.25em;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        /* তথ্য কার্ড ও ভিজ্যুয়ালাইজেশন স্থানধারক */
+        .data-visualization, .reference-box {
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+        .reference-box {
+            border-left: 5px solid #2ecc71;
+            font-style: italic;
+        }
+        .data-visualization strong {
+            color: #3498db;
+        }
+        
+        /* তালিকা ও মূল শব্দ */
+        ul {
+            list-style: disc;
+            padding-left: 25px;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #e74c3c;
+            font-weight: 700;
+        }
+        
+        /* সোশ্যাল শেয়ার বাটন - অপরিবর্তিত */
+        .share-buttons {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px dashed #adb5bd;
+            text-align: center;
+        }
+        .share-btn {
+            display: inline-block;
+            padding: 12px 18px;
+            margin: 0 6px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .fb { background-color: #3b5998; }
+        .twitter { background-color: #1da1f2; }
+        .whatsapp { background-color: #25d366; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#definition">সংজ্ঞা ও প্রকার</a></li>
+                <li class="dropdown">
+                    <a href="#">কারণ ও নিয়ন্ত্রণ ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#causes">প্রধান কারণ</a>
+                        <a href="#effects">বিস্তারিত প্রভাব</a>
+                        <a href="#control">নিয়ন্ত্রণের কৌশল</a>
+                    </div>
+                </li>
+                <li><a href="#data">তথ্য ও সূত্র</a></li>
+            </ul>
+        </div>
+
+        <div class="header-graphic">
+            <h1 id="home">📈 মুদ্রাস্ফীতি: অর্থনীতির রক্তক্ষরণ - বিস্তারিত বিশ্লেষণ ও সমাধান</h1>
+            <div class="hook">
+                <p><strong>🚨 বাস্তব উদাহরণ:</strong> আজ থেকে ৫ বছর আগে ১০০ টাকা দিয়ে যে বাজার করতেন, আজ কি তা সম্ভব? বাংলাদেশের মতো উন্নয়নশীল অর্থনীতির জন্য **মুদ্রাস্ফীতি** হলো একটি নীরব ঘাতক—যা আপনার পকেটের টাকা কমায়, কিন্তু আয় বাড়ায় না। এটি কেবল অর্থনৈতিক তত্ত্ব নয়, এটি প্রতিটি পরিবার, প্রতিটি ব্যবসায়ী এবং প্রতিটি এইচএসসি পরীক্ষার্থীর জন্য জীবনঘনিষ্ঠ একটি চ্যালেঞ্জ। এই প্রবন্ধে আমরা মুদ্রাস্ফীতির কার্যকারণ, এর গভীর প্রভাব এবং নিয়ন্ত্রণের কৌশল নিয়ে বিস্তারিত আলোচনা করব।</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h2 id="definition">🔍 মুদ্রাস্ফীতি কী? ও এর প্রকারভেদ</h2>
+            <p>অর্থনীতিতে মুদ্রাস্ফীতি বলতে **পণ্য ও সেবার দামের ধারাবাহিক ও সামগ্রিক বৃদ্ধিকে** বোঝায়, যার ফলস্বরূপ অর্থের ক্রয়ক্ষমতা হ্রাস পায়।</p>
+
+            <h3>প্রকারভেদ (গতির ভিত্তিতে):</h3>
+            <ul>
+                <li>**র‍্যাঙ্কিং বা মৃদু মুদ্রাস্ফীতি (Creeping Inflation):** দাম খুব ধীরে বাড়ে (২-৩% বার্ষিক)। এটি অর্থনীতিতে **সামান্য উদ্দীপনা** সৃষ্টি করে, যা স্বাস্থ্যকর।</li>
+                <li>**ধাবমান মুদ্রাস্ফীতি (Galloping Inflation):** দাম দ্রুত হারে (১০%-৫০%) বাড়ে। এটি অর্থনীতির জন্য **বিপজ্জনক**।</li>
+                <li>**অতি মুদ্রাস্ফীতি (Hyperinflation):** দাম অতি দ্রুত গতিতে (৩ অঙ্ক বা তার বেশি) বাড়ে। এটি অর্থনীতিকে **সম্পূর্ণ ভেঙে ফেলে** (যেমন: জিম্বাবুয়ে বা ভেনিজুয়েলায় ঘটেছিল)।</li>
+            </ul>
+
+            <h2 id="causes">💣 মুদ্রাস্ফীতির বিস্তারিত কারণ ও বাস্তব উদাহরণ</h2>
+            <p>মুদ্রাস্ফীতির দুটি মৌলিক কারণকে বাংলাদেশের প্রেক্ষাপটে বিশ্লেষণ করা হলো:</p>
+            
+            <h3>১. চাহিদা বৃদ্ধিজনিত মুদ্রাস্ফীতি (Demand-Pull Inflation)</h3>
+            <p>যখন সামগ্রিক চাহিদা (Aggregate Demand) সামগ্রিক যোগানের (Aggregate Supply) চেয়ে বেশি হয়।</p>
+            <ul>
+                <li>**টাকার সরবরাহ বৃদ্ধি (Money Supply):** কেন্দ্রীয় ব্যাংক যদি অতিরিক্ত টাকা বাজারে ছাড়ে বা ব্যাংক ঋণের সুদের হার কমিয়ে দেয়। **উদাহরণ:** কোভিড-পরবর্তী সময়ে প্রণোদনা ঋণ এবং রেমিট্যান্স প্রবাহ বেড়ে যাওয়ায় মানুষের হাতে টাকা বাড়ে।</li>
+                <li>**সরকারি ব্যয় বৃদ্ধি:** সরকার উন্নয়ন প্রকল্পে (যেমন: পদ্মা সেতু) অতিরিক্ত অর্থ ব্যয় করলে মানুষের আয় বাড়ে, যা বাজারে অতিরিক্ত চাহিদা তৈরি করে।</li>
+            </ul>
+            
+            <h3>২. ব্যয় বৃদ্ধিজনিত মুদ্রাস্ফীতি (Cost-Push Inflation)</h3>
+            <p>উৎপাদন খরচ বাড়লে এই মুদ্রাস্ফীতি ঘটে, কারণ তা চূড়ান্ত পণ্যের দামে যোগ হয়।</p>
+            <ul>
+                <li>**জ্বালানি/বিদ্যুৎ মূল্য বৃদ্ধি:** বাংলাদেশে যখন সরকার ডিজেল বা বিদ্যুতের দাম বাড়ায়, তখন পরিবহন খরচ বাড়ে এবং সব পণ্যের দাম বাড়ে।</li>
+                <li>**আন্তর্জাতিক বাজারের প্রভাব:** রাশিয়া-ইউক্রেন যুদ্ধের পর **গম, ভোজ্যতেল ও সারের** আন্তর্জাতিক দাম বাড়লে আমদানিনির্ভর বাংলাদেশে পণ্যের দাম বেড়ে যায়।</li>
+                <li>**শ্রমিকের মজুরি বৃদ্ধি:** যদি শ্রমিকের মজুরি উৎপাদনশীলতা বৃদ্ধির চেয়ে বেশি হারে বাড়ে, তবে তা উৎপাদন খরচ বাড়িয়ে দেয়।</li>
+            </ul>
+
+            <h2 id="effects">💥 মুদ্রাস্ফীতির বিস্তারিত অর্থনৈতিক ও সামাজিক প্রভাব</h2>
+            <p>মুদ্রাস্ফীতি অর্থনীতির বিভিন্ন খাতে বহুমুখী প্রভাব ফেলে:</p>
+            
+            <h3>অর্থনৈতিক স্থিতিশীলতা এবং বন্টনে প্রভাব:</h3>
+            <ul>
+                <li>**আয় বৈষম্য বৃদ্ধি:** নির্দিষ্ট আয়ের মানুষ (শিক্ষক, বেসরকারি চাকরিজীবী) সবচেয়ে বেশি ক্ষতিগ্রস্ত হয়, কারণ তাদের আয় বাড়ে না, কিন্তু ব্যয় বাড়ে। অন্যদিকে, ব্যবসায়ী ও ফটকাবাজরা লাভবান হয়, ফলে **ধনী-দরিদ্রের বৈষম্য বাড়ে**।</li>
+                <li>**সঞ্চয় ও বিনিয়োগে ক্ষতি:** মানুষ ব্যাংকে টাকা রেখে লাভ দেখে না, কারণ সঞ্চয়ের সুদের চেয়ে মুদ্রাস্ফীতির হার বেশি থাকে। এতে **সঞ্চয়ের প্রবণতা কমে** এবং দীর্ঘমেয়াদী বিনিয়োগ বাধাগ্রস্ত হয়।</li>
+                <li>**রপ্তানি প্রতিযোগিতা:** অভ্যন্তরীণ দাম বেড়ে গেলে দেশের পণ্য আন্তর্জাতিক বাজারে **অপেক্ষাকৃত দামি** হয়, ফলে রপ্তানি ক্ষতিগ্রস্ত হয়।</li>
+            </ul>
+            
+            <div class="data-visualization">
+                <h3>[গ্রাফের স্থানধারক: মুদ্রাস্ফীতি]</h3>
+                <p><strong></strong></p>
+                <p>উপরের গ্রাফটিতে দেখা যায়, কীভাবে মুদ্রাস্ফীতির হার বাড়লে অর্থনীতিতে টাকার মূল্য কমে যায়। এই গ্রাফটি বাংলাদেশ ব্যাংক বা বিবিএস (BBS) থেকে নেওয়া যেতে পারে।</p>
+            </div>
+
+            <h2 id="control">🛡️ মুদ্রাস্ফীতি নিয়ন্ত্রণের আধুনিক কৌশলসমূহ</h2>
+            <p>মুদ্রাস্ফীতি নিয়ন্ত্রণের জন্য সরকার (রাজস্ব নীতি) ও কেন্দ্রীয় ব্যাংক (মুদ্রা নীতি) সমন্বিত কৌশল গ্রহণ করে:</p>
+            
+            <ul>
+                <li>**মুদ্রা নীতি (টাকার সরবরাহ নিয়ন্ত্রণ):**
+                    <ul>
+                        <li>**ব্যাংক হার বৃদ্ধি:** কেন্দ্রীয় ব্যাংক বাণিজ্যিক ব্যাংকগুলোকে বেশি সুদে ঋণ দিলে, বাণিজ্যিক ব্যাংকগুলোও গ্রাহকদের বেশি সুদে ঋণ দেয়। এতে বাজারে **টাকার সরবরাহ কমে**।</li>
+                        <li>**খোলা বাজার নীতি:** কেন্দ্রীয় ব্যাংক সরকারি বন্ড বিক্রি করে বাজার থেকে টাকা তুলে নেয়।</li>
+                    </ul>
+                </li>
+                <li>**রাজস্ব নীতি (সরকারি ব্যয় নিয়ন্ত্রণ):**
+                    <ul>
+                        <li>**করের হার বৃদ্ধি:** জনগণের ব্যয়যোগ্য আয় কমাতে সরকার করের হার বাড়াতে পারে।</li>
+                        <li>**অপ্রয়োজনীয় সরকারি ব্যয় হ্রাস:** সরকার অনুৎপাদনশীল খাতে ব্যয় কমিয়ে দিয়ে বাজারে সামগ্রিক চাহিদা কমাতে পারে।</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <hr>
+            <p style="text-align: center; font-size: 1.1em; color: #34495e;">মুদ্রাস্ফীতি মোকাবিলায় **সরকারের রাজস্ব নীতি এবং কেন্দ্রীয় ব্যাংকের মুদ্রা নীতির মধ্যে সমন্বয়** হলো স্থিতিশীল অর্থনীতির মূল চাবিকাঠি।</p>
+
+            <div class="reference-box" id="data">
+                <h3>তথ্যসূত্র ও রেফারেন্সের স্থানধারক:</h3>
+                <p>এই বিশ্লেষণটি প্রস্তুত করতে নিম্নলিখিত তথ্যসূত্র ও ডেটা উৎসগুলো ব্যবহার করা হয়েছে বা ব্যবহার করা যেতে পারে:</p>
+                <ul>
+                    <li><strong>[Link to Bangladesh Bank’s Monetary Policy Statements]</strong></li>
+                    <li><strong>[Link to Bangladesh Bureau of Statistics (BBS) CPI Data]</strong></li>
+                    <li><strong>[Link to Relevant academic papers/books on Inflation in developing countries]</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content share-buttons">
+            <p style="color: #333;">গুরুত্বপূর্ণ তথ্যটি আপনার বন্ধুদের সাথে শেয়ার করুন:</p>
+            <a href="#" class="share-btn fb">Facebook</a>
+            <a href="#" class="share-btn twitter">Twitter / X</a>
+            <a href="#" class="share-btn whatsapp">WhatsApp</a>
+        </div>
+    </div>
+
+</body>
+</html>
