@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 HSC অর্থনীতি AI ড্যাশবোর্ড: স্মার্ট লার্নিং প্ল্যাটফর্ম</title>
+    <style>
+        /* বেসিক রিসেট ও ফন্ট */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8; /* হালকা নীল-ধূসর ব্যাকগ্রাউন্ড */
+            color: #2c3e50;
+            line-height: 1.6;
+            transition: background-color 0.3s;
+        }
+
+        /* মূল কনটেইনার */
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* --- ন্যানো বার: স্কেলাবল, ক্লিন ইউআই --- */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: #007bff;
+        }
+        .nav-links a {
+            color: #34495e;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #007bff;
+        }
+        .nav-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* --- হিরো সেকশন: এআই ইন্টিগ্রেশন --- */
+        .hero-section {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: 900;
+            text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+        .hero-section p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        .hero-button {
+            background-color: #2ecc71;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .hero-button:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+        }
+
+        /* --- ড্যাশবোর্ড/বেন্টো লেআউট সিস্টেম --- */
+        .dashboard-layout {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .bento-card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .bento-card h3 {
+            font-size: 1.5em;
+            color: #3498db;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .icon {
+            font-size: 2em;
+            margin-right: 10px;
+        }
+        
+        /* স্মার্ট অ্যানালিটিকস কার্ড (ভিজ্যুয়াল) */
+        #analytics-card {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #f9f9f9, #ffffff);
+        }
+        .progress-bar {
+            height: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 75%; /* উদাহরণ: ৭৫% অগ্রগতি */
+            background-color: #2ecc71;
+            border-radius: 5px;
+        }
+
+        /* --- এআই ইন্টিগ্রেশন উপাদান (চ্যাটবট) --- */
+        #chatbot-card {
+            background: #eaf4ff; /* লাইট ব্লু ব্যাকগ্রাউন্ড */
+            border: 1px solid #007bff;
+        }
+        .chatbot-bubble {
+            background-color: #d1e7ff;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* --- ফুটার: ব্র্যান্ডিং ও কপিরাইট --- */
+        .footer {
+            background-color: #34495e;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 5px solid #007bff;
+        }
+        .footer a {
+            color: #2ecc71;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .social-share {
+            margin-top: 20px;
+        }
+
+        /* মোবাইল UI এর জন্য রেসপনসিভ ডিজাইন */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                display: none; /* মোবাইলে হ্যামবার্গার মেনু ধরে নিতে হবে */
+            }
+            .hero-section h1 {
+                font-size: 2.5em;
+            }
+            #analytics-card {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">ইকোনমিক্স 💡 এআই</div>
+            <div class="nav-links">
+                <a href="#">হোম</a>
+                <a href="#">পাঠ্যসূচি</a>
+                <a href="#">Analytics</a>
+                <a href="#" class="nav-button">সাবস্ক্রাইব করুন</a>
+            </div>
+        </div>
+
+        <div class="hero-section">
+            <h1>এইচএসসি অর্থনীতি: এআই চালিত স্মার্ট লার্নিং</h1>
+            <p>আপনার সিলেবাস, ডেটা অ্যানালাইসিস এবং পরীক্ষা প্রস্তুতি এখন সম্পূর্ণ নতুন উপায়ে। **ভবিষ্যতের অর্থনীতিবিদ** তৈরি করতে একটি একক প্ল্যাটফর্ম।</p>
+            <a href="#dashboard" class="hero-button">ফ্রি ড্যাশবোর্ড ডেমো দেখুন</a>
+        </div>
+
+        <div class="dashboard-layout" id="dashboard">
+            
+            <div class="bento-card" id="analytics-card">
+                <h3>📊 রিয়েল-টাইম অ্যানালিটিকস</h3>
+                <p>আপনার সামগ্রিক অগ্রগতি ও দুর্বলতার ক্ষেত্রগুলি এআই-এর মাধ্যমে বিশ্লেষণ করুন।</p>
+                <div class="info-card">
+                    <p><strong>বর্তমান স্কোর:</strong> ৭৮%</p>
+                    <p><strong>দুর্বলতম অধ্যায়:</strong> 'মুদ্রাস্ফীতি' ও 'খাদ্য নিরাপত্তা'</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p style="color:#007bff; margin-top: 5px;">*এআই জেনারেটেড অন্তর্দৃষ্টি: এই সপ্তাহে 'মুদ্রাস্ফীতি' অধ্যায়ে আরও ২ ঘণ্টা সময় দিন।</p>
+                </div>
+            </div>
+            
+            <div class="bento-card">
+                <h3>✍️ স্মার্ট অটো-কুইজ</h3>
+                <p>প্রতিটি অধ্যায় শেষে এআই স্বয়ংক্রিয়ভাবে আপনার জন্য কুইজ তৈরি করবে।</p>
+                <ul>
+                    <li><span class="icon">✅</span> গতানুগতিক প্রশ্ন বাদ দিন।</li>
+                    <li><span class="icon">🚀</span> নতুন MCQ প্যাটার্নে অভ্যস্ত হোন।</li>
+                </ul>
+            </div>
+            
+            <div class="bento-card">
+                <h3>🔮 প্রডিক্টিভ ড্যাশবোর্ড</h3>
+                <p>আপনার বর্তমান অগ্রগতি অনুযায়ী চূড়ান্ত পরীক্ষায় সম্ভাব্য গ্রেড অনুমান করুন।</p>
+                <p style="font-size: 2.5em; color: #e67e22; font-weight: 800; text-align: center;">A-</p>
+                <p style="text-align: center;">*এই হার বাড়াতে হলে দৈনিক ১ ঘণ্টা বাড়তি অনুশীলন প্রয়োজন।</p>
+            </div>
+
+            <div class="bento-card">
+                <h3>📈 ইন্টারেক্টিভ ডেটা</h3>
+                <p>অর্থনীতির জটিল তত্ত্বগুলো ইন্টারেক্টিভ গ্রাফ ও চার্টের মাধ্যমে বুঝুন।</p>
+                <p style="color:#3498db; font-style: italic;"> - চাহিদা-যোগান রেখার ইন্টারেক্টিভ সিমুলেশন।</p>
+            </div>
+            
+            <div class="bento-card">
+                <h3>🤖 এআই জেনারেটেড অন্তর্দৃষ্টি</h3>
+                <p>আপনার ভুল থেকে শিক্ষা নিয়ে এআই নতুন পড়ার কৌশল সাজিয়ে দেবে।</p>
+                <p><strong>আপনার পড়ার স্টাইল:</strong> ভিজ্যুয়াল-ভিত্তিক।</p>
+                <p><strong>পরামর্শ:</strong> দ্রুত শেখার জন্য ভিডিও লেকচার ও গ্রাফ বেশি ব্যবহার করুন।</p>
+            </div>
+
+            <div class="bento-card" id="chatbot-card">
+                <h3>💬 এআই চ্যাটবট</h3>
+                <p>যে কোনো প্রশ্ন করুন, দ্রুত ও নির্ভুল উত্তর পান।</p>
+                <div class="chatbot-bubble">মুদ্রাস্ফীতি ও অর্থের যোগানের সম্পর্ক কী?</div>
+                <div class="chatbot-bubble" style="text-align: right; background-color: #007bff; color: white;">মুদ্রাস্ফীতি হলো দাম বাড়া...</div>
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 HSC Economics AI Platform. All rights reserved.</p>
+            <div class="social-share">
+                <p style="font-size: 1.1em; font-weight: 600;">শেয়ার করুন:</p>
+                <a href="#" class="nav-button fb">Facebook</a>
+                <a href="#" class="nav-button twitter">Twitter</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
