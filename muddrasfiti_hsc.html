@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 মুদ্রাস্ফীতি: আপনার টাকার শক্তি কীভাবে কমে যায়? | HSC অর্থনীতি</title>
+    <style>
+        /* ফন্ট ও বেসিক স্টাইল */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.75;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: #fcfcfc; /* পরিষ্কার সাদা ব্যাকগ্রাউন্ড */
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0;
+        }
+
+        /* অনুপ্রাণিত ডিজাইন (ইনস্পায়ার্ড ডিজাইন) এলিমেন্টস */
+        .header-graphic {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%); /* উষ্ণ গ্র্যাডিয়েন্ট */
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header-graphic::before {
+            content: '৳'; /* টাকা সিম্বল দিয়ে ইলাস্ট্রেশন */
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 8em;
+            opacity: 0.1;
+            font-weight: 900;
+        }
+        
+        .main-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* নেভিগেশন বার (Dropdown Menu) স্টাইল */
+        .navbar {
+            background-color: #34495e; /* নেভি ব্লু */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #e74c3c; /* মুদ্রাস্ফীতির থিম রঙ */
+        }
+        /* ড্রপডাউন কন্টেন্ট */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0 0 8px 8px;
+            top: 100%;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f5f5f5;
+        }
+        .navbar li:hover .dropdown-content {
+            display: block;
+        }
+
+        /* হেডিং স্টাইল */
+        h1 {
+            color: white;
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #e74c3c; /* লাল সতর্কতা রঙ */
+            margin-top: 30px;
+            border-left: 5px solid #e74c3c;
+            padding-left: 15px;
+            font-size: 1.7em;
+            font-weight: 700;
+        }
+
+        /* হুক সেকশন */
+        .hook p {
+            font-size: 1.15em;
+            margin-top: 15px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        
+        /* তথ্য কার্ড (ডাটা ভিজ্যুয়ালাইজেশন অনুপ্রাণিত) */
+        .info-card {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .info-card h3 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 5px;
+        }
+        
+        /* তালিকা ও মূল শব্দ */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            background-color: #fffaf0; /* হালকা হলুদ ব্যাকগ্রাউন্ড */
+            margin-bottom: 10px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12; /* কমলা বর্ডার */
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        }
+        ul li::before {
+            content: '📉'; /* নিম্নমুখী গ্রাফের ইমোজি */
+            margin-right: 10px;
+            color: #2c3e50;
+        }
+        strong {
+            color: #e74c3c;
+            font-weight: 700;
+        }
+        
+        /* সোশ্যাল শেয়ার বাটন */
+        .share-buttons {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px dashed #adb5bd;
+            text-align: center;
+        }
+        .share-buttons p {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .share-btn {
+            display: inline-block;
+            padding: 12px 18px;
+            margin: 0 6px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .share-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .fb { background-color: #3b5998; }
+        .twitter { background-color: #1da1f2; }
+        .whatsapp { background-color: #25d366; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#definition">মুদ্রাস্ফীতি কী?</a></li>
+                <li class="dropdown">
+                    <a href="#">কারণ ও প্রভাব ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#causes">প্রধান কারণ</a>
+                        <a href="#effects">অর্থনৈতিক প্রভাব</a>
+                    </div>
+                </li>
+                <li><a href="#control">নিয়ন্ত্রণের উপায়</a></li>
+            </ul>
+        </div>
+
+        <div class="header-graphic">
+            <h1 id="home">🚨 মুদ্রাস্ফীতি: আপনার টাকার শক্তি কীভাবে কমে যায়?</h1>
+            <div class="hook">
+                <p><strong>🔥 একটি জরুরি প্রশ্ন:</strong> গত বছর যে টাকা দিয়ে ১ কেজি চাল কিনেছিলেন, এ বছর কি সেই একই টাকা দিয়ে ১ কেজি কেনা যায়? উত্তর: না! এটাই হলো **মুদ্রাস্ফীতির** কঠিন বাস্তবতা। আপনার হাতে টাকা থাকলেও যদি তার ক্রয়ক্ষমতা কমে যায়, তবে অর্থনীতিতে কী বিপর্যয় ঘটে? এইচএসসি পরীক্ষার জন্য এই বিষয়টি বোঝা সবচেয়ে জরুরি, কারণ এটি সরাসরি আপনার পকেটে আঘাত হানে!</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h2 id="definition">🔍 মুদ্রাস্ফীতি কী? (Inflation)</h2>
+            <p>সহজ ভাষায়, **মুদ্রাস্ফীতি** হলো অর্থনীতির এমন একটি অবস্থা, যখন বাজারে **পণ্য ও সেবার দাম ক্রমাগত বাড়ে**, ফলে অর্থের **ক্রয়ক্ষমতা (Purchasing Power) কমে যায়**। এই সময় একই পরিমাণ টাকা দিয়ে আগের চেয়ে কম পণ্য কেনা যায়।</p>
+
+            <div class="info-card">
+                <h3>📈 মুদ্রাস্ফীতির হার (Inflation Rate)</h3>
+                <p>এটি হলো একটি নির্দিষ্ট সময়ে (যেমন, এক বছর) **পণ্য ও সেবার দামের গড় বৃদ্ধি**। অর্থনীতিতে এটি Consumer Price Index (CPI) বা Producer Price Index (PPI) এর মাধ্যমে পরিমাপ করা হয়।</p>
+            </div>
+            
+            <h2 id="causes">💣 মুদ্রাস্ফীতির প্রধান কারণসমূহ</h2>
+            <p>মুদ্রাস্ফীতির প্রধানত দুটি মৌলিক কারণ রয়েছে, যা বাজারের ভারসাম্য নষ্ট করে:</p>
+
+            <ul>
+                <li>**চাহিদা বৃদ্ধিজনিত মুদ্রাস্ফীতি (Demand-Pull Inflation):**
+                    <p>যখন মানুষের হাতে **টাকার সরবরাহ বেশি থাকে** এবং তারা বাজারে বেশি পণ্য দাবি করে, কিন্তু **উৎপাদন সেই হারে বাড়ে না**, তখন এই মুদ্রাস্ফীতি ঘটে। (বেশি টাকা, কম পণ্য তাড়া করে)।</p>
+                </li>
+                <li>**ব্যয় বৃদ্ধিজনিত মুদ্রাস্ফীতি (Cost-Push Inflation):**
+                    <p>যখন **উৎপাদন খরচ (যেমন: কাঁচামালের দাম, শ্রমিকের মজুরি, জ্বালানি খরচ)** বেড়ে যায়, তখন উৎপাদকরা খরচ মেটাতে পণ্যের দাম বাড়িয়ে দেয়। (ব্যয় বাড়ে, দাম বাড়ে)।</p>
+                </li>
+            </ul>
+
+            <h2 id="effects">💥 অর্থনৈতিক ও সামাজিক প্রভাব</h2>
+            <p>মুদ্রাস্ফীতির প্রভাব অর্থনীতির বিভিন্ন স্তরে অনুভূত হয়, যা একটি দেশের স্থিতিশীলতা নষ্ট করে।</p>
+            
+            <div class="info-card">
+                <h3>কাদের লাভ, কাদের ক্ষতি?</h3>
+                <ul>
+                    <li>**ক্ষতিগ্রস্ত হয়:** নির্দিষ্ট আয়ের মানুষ (বেতনভোগী), ঋণদাতা এবং সঞ্চয়কারীরা (কারণ অর্থের মূল্য কমে যায়)।</li>
+                    <li>**উপকৃত হয়:** ব্যবসায়ী, ফটকাবাজ এবং ঋণগ্রহীতারা (কারণ তারা যে টাকা পরিশোধ করে, সেগুলোর ক্রয়ক্ষমতা কমে যায়)।</li>
+                </ul>
+            </div>
+            
+            <h2 id="control">🛡️ মুদ্রাস্ফীতি নিয়ন্ত্রণের উপায়</h2>
+            <p>সরকার ও কেন্দ্রীয় ব্যাংক দুটি প্রধান নীতির মাধ্যমে মুদ্রাস্ফীতি নিয়ন্ত্রণের চেষ্টা করে:</p>
+            
+            <ul>
+                <li>**রাজস্ব নীতি (Fiscal Policy):**
+                    <p>সরকার **ব্যয় কমিয়ে** দেয় এবং **কর বাড়িয়ে** জনগণের হাত থেকে অতিরিক্ত টাকা তুলে নেয়, ফলে চাহিদা কমে আসে।</p>
+                </li>
+                <li>**মুদ্রা নীতি (Monetary Policy):**
+                    <p>কেন্দ্রীয় ব্যাংক **সুদের হার বাড়িয়ে** দেয় এবং বাজারে **টাকার সরবরাহ কমিয়ে** দেয়। এতে মানুষ ঋণ নিতে নিরুৎসাহিত হয় এবং সঞ্চয়ে আগ্রহী হয়।</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main-content" style="text-align: center; margin-top: 10px; border-radius: 0 0 12px 12px;">
+            <hr style="border-top: 1px dashed #adb5bd;">
+            <p style="font-size: 1.1em; color: #333;">মুদ্রাস্ফীতি নিয়ন্ত্রণের জন্য কোন নীতিটি (রাজস্ব নাকি মুদ্রা) বেশি কার্যকর বলে আপনি মনে করেন? আপনার উত্তর মন্তব্য করুন!</p>
+        </div>
+
+        <div class="main-content share-buttons">
+            <p>গুরুত্বপূর্ণ তথ্যটি আপনার বন্ধুদের সাথে শেয়ার করুন:</p>
+            <a href="#" class="share-btn fb">Facebook</a>
+            <a href="#" class="share-btn twitter">Twitter / X</a>
+            <a href="#" class="share-btn whatsapp">WhatsApp</a>
+        </div>
+    </div>
+
+</body>
+</html>
