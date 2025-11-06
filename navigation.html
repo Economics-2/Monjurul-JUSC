@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Navigation Menu</title>
+    <style>
+        /* Basic reset and page styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #353b48; /* Dark background from image */
+            overflow: hidden;
+        }
+
+        /* The main navigation container */
+        .navigation {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            height: 70px;
+            background: #2f3640; /* Dark bar color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .navigation ul {
+            display: flex;
+            width: 100%;
+            padding: 0;
+        }
+
+        /* Individual list items */
+        .navigation ul li {
+            position: relative;
+            list-style: none;
+            width: 20%; /* 100% / 5 items */
+            height: 70px;
+            z-index: 1;
+        }
+
+        /* Links within list items */
+        .navigation ul li a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        /* Icon styling */
+        .navigation ul li a .icon {
+            position: relative;
+            display: block;
+            line-height: 75px; /* Aligns icon vertically */
+            font-size: 1.8rem;
+            text-align: center;
+            transition: 0.5s;
+            color: #dcdde1; /* Light icon color */
+        }
+
+        /* Text styling (hidden by default) */
+        .navigation ul li a .text {
+            position: absolute;
+            color: #dcdde1; /* Light text color */
+            font-weight: 400;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            opacity: 0;
+            transform: translateY(20px);
+            white-space: nowrap;
+        }
+
+        /* --- Active State --- */
+
+        /* Move icon up when active */
+        .navigation ul li.active a .icon {
+            transform: translateY(-32px);
+            color: #ffffff; /* White icon in circle */
+        }
+
+        /* Show text when active */
+        .navigation ul li.active a .text {
+            opacity: 1;
+            transform: translateY(12px);
+            color: #ffffff; /* White text */
+        }
+
+        /* --- The "Magic" Indicator --- */
+        .indicator {
+            position: absolute;
+            top: -45%; /* Pushes the circle up */
+            width: 65px;
+            height: 65px;
+            background: #4cd137; /* Green color from image */
+            border-radius: 50%;
+            border: 6px solid #353b48; /* Page background color for "cutout" effect */
+            transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Easing for bounce effect */
+            z-index: 0;
+        }
+
+        /* Indicator movement based on active item */
+        /* Note: calc( (100% / 5) * N - (100% / 10) ) 
+           (100% / 5) is the width of one item (20%)
+           (100% / 10) is half the width of one item (10%)
+           This centers the indicator under the item.
+           (20% * 1) - 10% = 10%
+           (20% * 2) - 10% = 30%
+           ...
+        */
+        .navigation ul li:nth-child(1).active ~ .indicator {
+            left: calc(20% * 1 - 10%);
+        }
+        .navigation ul li:nth-child(2).active ~ .indicator {
+            left: calc(20% * 2 - 10%);
+        }
+        .navigation ul li:nth-child(3).active ~ .indicator {
+            left: calc(20% * 3 - 10%);
+        }
+        .navigation ul li:nth-child(4).active ~ .indicator {
+            left: calc(20% * 4 - 10%);
+        }
+        .navigation ul li:nth-child(5).active ~ .indicator {
+            left: calc(20% * 5 - 10%);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 420px) {
+            .navigation {
+                height: 60px;
+            }
+            .navigation ul li {
+                height: 60px;
+            }
+            .navigation ul li a .icon {
+                font-size: 1.5rem;
+                line-height: 65px;
+            }
+            .navigation ul li.active a .icon {
+                transform: translateY(-28px);
+            }
+            .navigation ul li a .text {
+                font-size: 0.7rem;
+            }
+             .navigation ul li.active a .text {
+                transform: translateY(8px);
+            }
+            .indicator {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navigation">
+        <!-- Recreated list from the visual preview in the image -->
+        <ul>
+            <!-- Item 1: Home (Active by default) -->
+            <li class="list active">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+
+            <!-- Item 2: Profile -->
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <span class="text">Profile</span>
+                </a>
+            </li>
+
+            <!-- Item 3: Messages -->
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                    </span>
+                    <span class="text">Messages</span>
+                </a>
+            </li>
+
+            <!-- Item 4: Photos -->
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="camera-outline"></ion-icon>
+                    </span>
+                    <span class="text">Photos</span>
+                </a>
+            </li>
+
+            <!-- Item 5: Settings -->
+            <li class="list">
+                <a href="#">
+                    <span class="icon">
+                        <ion-icon name="settings-outline"></ion-icon>
+                    </span>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+
+            <!-- The magic indicator element -->
+            <div class="indicator"></div>
+        </ul>
+    </nav>
+
+    <!-- IonIcons Script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- JavaScript to handle the 'active' class toggling -->
+    <script>
+        // Get all list items
+        const list = document.querySelectorAll('.list');
+
+        // Add click event listener to each list item
+        list.forEach((item) => {
+            item.addEventListener('click', () => {
+                // Remove 'active' class from all other items
+                list.forEach((li) => li.classList.remove('active'));
+                
+                // Add 'active' class to the clicked item
+                item.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
